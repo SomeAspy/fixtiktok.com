@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "allowJs": true,
+        "target": "ESNext",
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "allowUnreachableCode": false,
+        "allowUnusedLabels": false,
+        "alwaysStrict": true,
+        "module": "ESNext",
+        "moduleResolution": "nodenext",
+        "types": [
+            "node"
+        ],
+        "esModuleInterop": true,
+        "removeComments": true,
+        "noImplicitReturns": true,
+        "resolveJsonModule": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "include": [
+        "./src/**/*.ts",
+        "src/routes/base.ts",
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "docs"
+    ],
+    "ts-node": {
+        "esm": true,
+        "experimentalSpecifierResolution": "node"
+    }
+}

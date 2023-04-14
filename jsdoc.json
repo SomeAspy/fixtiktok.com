@@ -1,0 +1,21 @@
+{
+    "source": {
+        "includePattern": "\\.(jsx|js|ts|tsx)$",
+        "include": [
+            "src"
+        ],
+        "exclude": []
+    },
+    "recurseDepth": 10,
+    "opts": {
+        "destination": "./docs/",
+        "recurse": true,
+        "encoding": "utf8",
+        "private": true,
+        "readme": "./.github/README.md",
+        "verbose": true
+    },
+    "plugins": [
+        "node_modules/better-docs/typescript"
+    ]
+}
