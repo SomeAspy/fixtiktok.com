@@ -1,6 +1,6 @@
 /**
  * @file Server module
- * @author Aiden
+ * @author @SomeAspy
  * @license GPL-3.0
  * @module server
  * @version 0.0.1
