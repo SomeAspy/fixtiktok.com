@@ -4,6 +4,8 @@
  * @license GPL-3.0
  */
 
+import { userAgent } from './fetchUserAgent.js';
+
 /**
  * @name expandUrl
  * @description Expand a URL
@@ -17,6 +19,9 @@ export async function expandUrl(url: string): Promise<string> {
         const response = await fetch(url, {
             method: 'HEAD',
             redirect: 'follow',
+            headers: {
+                'User-Agent': userAgent,
+            },
         });
         return response.url;
     } catch (error) {
