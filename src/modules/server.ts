@@ -34,5 +34,3 @@ FastifyServer.route({
 export async function startServer(): Promise<void> {
     await FastifyServer.listen(config.fastify);
 }
-
-await startServer();

@@ -1,3 +1,55 @@
+@font-face{
+    font-family: Manrope;
+    src: url("https: //fonts.googleapis.com/css2?family=Manrope&display=swap");
+}
+
 body{
     background-color: #313639;
+
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.use{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Manrope', sans-serif;
+    color: #FFFFFF;
+    font-size: 1vw;
+
+}
+
+.copyright {
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    color: rgb(247 247 255);
+    font-family: Manrope, sans-serif;
+    font-size: 10px;
+}
+
+.source {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    color: rgb(247 247 255);
+    font-family: Manrope, sans-serif;
+    font-size: 15px;
+}
+
+a:link {
+    color: rgb(247 247 255);
+}
+
+a:visited {
+    color: rgb(247 247 255);
 }
