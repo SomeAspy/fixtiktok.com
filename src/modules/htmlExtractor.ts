@@ -54,12 +54,13 @@ export function extractDescription(html: string): string {
  * @description Extracts the stats from HTML
  * @param {string} html - HTML to extract from
  * @returns {{likes:string; comments:string;}} Stats
+ * @private
  */
-export function extractStats(html: string): {
+function extractStats(html: string): {
     likes: string;
     comments: string;
 } {
-    const regex = /name="description" content="(.+?)\. /; // Don't touch - it WILL break
+    const regex = /name="description" content="(.+?)\. /;
     const match = regex.exec(html);
     if (match == null) {
         return {
@@ -75,6 +76,23 @@ export function extractStats(html: string): {
         likes,
         comments,
     };
+}
+
+/**
+ * @name extractMp4
+ * @param html - HTML to extract from
+ * @returns {string} MP4 URL
+ * @private
+ */
+function extractMp4(html: string): string {
+    const regex = /","playAddr":"(.+?)","downloadAddr":/;
+    const match = regex.exec(html);
+    if (match == null) {
+        return '';
+    }
+    let URL = decodeURI(match[1]);
+    URL = URL.replace(/\\u002F/g, '/');
+    return URL;
 }
 
 /**
@@ -100,3 +118,5 @@ const URL = 'https://www.tiktok.com/@angelinevalo/video/7221645980876164394';
 
 const DATA = buildPost(URL);
 console.log(await DATA);
+console.log(userAgent);
+console.log(decodeURI(extractMp4(await fetchHTML(URL))));

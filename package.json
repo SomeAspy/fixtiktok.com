@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "@fastify/static": "^6.10.1",
-    "fastify": "^4.15.0"
+    "fastify": "^4.15.0",
+    "file-download": "^0.1.2"
   }
 }
