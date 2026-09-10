@@ -21,7 +21,7 @@ app.get(
     return new Response('', {
       status: 302,
       headers: {
-        Location: 'https://github.com/okdargy/fxtiktok'
+        Location: 'https://github.com/someaspy/fixtiktok.com'
       }
     })
   })
